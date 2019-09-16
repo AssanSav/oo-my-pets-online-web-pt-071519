@@ -2,7 +2,11 @@ require 'pry'
 
 
 class Owner 
+<<<<<<< HEAD
   attr_reader :species, :name
+=======
+  attr_reader :name, :species
+>>>>>>> ceffd08addfd23f22fed91aa319e941079284cfd
   @@all = []
   
   def initialize(name)
@@ -37,6 +41,7 @@ class Owner
   
   def dogs 
     Dog.all.select {|dog| dog.owner == self}
+<<<<<<< HEAD
   end
   
   def buy_cat(name)
@@ -73,4 +78,12 @@ class Owner
   def list_pets 
     "I have #{@@dogs.count} dog(s), and #{@@dogs.count} cat(s)."
   end
+=======
+  end
+  
+  def buy_cat 
+    @@cats << Cat.new
+  end
+  
+>>>>>>> ceffd08addfd23f22fed91aa319e941079284cfd
 end
